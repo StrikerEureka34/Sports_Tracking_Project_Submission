@@ -26,8 +26,16 @@ Processed a 13.4-minute match video (40,245 frames at 50 FPS, 1920x1080 resoluti
 - Unique players tracked: 176
 - Full trajectories (30+ frames): 128
 
+### Video Links
+
+Applying Detections and Tracking on Sample Video:- https://youtu.be/iLB9cvWT7DY
+
+Projection to get bird's eye view and tracing data for each Id(Stored as CSV file):- https://youtu.be/xbZX24qSx8w
+
+
 ### Heatmap
 Spatial density of player positions. Red zones show high-traffic areas, blue zones show rarely occupied space.
+
 
 ![Heatmap](outputs/heatmap.png)
 
