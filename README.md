@@ -41,32 +41,13 @@ This pipeline processes cricket broadcast footage through four main stages:
   - Long (101-1000 frames): 543 tracks
   - Very long (1000+ frames): 49 tracks
 
-![Track Lifetime Distribution](outputs/full_40k_frames/analytics/track_lifetime_distribution.png)
-*Distribution of track lifetimes showing most tracks persist between 11-100 frames, indicating stable tracking through typical player movements and minor occlusions.*
 
 ### Video Outputs
 
-**Tracking with Bounding Boxes & IDs**: https://youtu.be/iLB9cvWT7DY  
+**Tracking with Bounding Boxes & IDs**: https://youtu.be/BxmAmBH1aEk and https://youtu.be/zjCny1Ba2gs
 Shows real-time detection boxes with persistent track IDs overlaid on original footage. Each player maintains a consistent ID number throughout their appearance, with trajectory trails showing recent movement paths.
 
-**Bird's Eye View Projection**: https://youtu.be/xbZX24qSx8w  
-Homography-transformed top-down view mapping player positions onto a 2D field representation. Provides tactical perspective for analyzing player formations and spatial coverage.
-
-### Camera View Analytics
-
-![Overall Heatmap](outputs/full_40k_frames/analytics/heatmap_overall.png)
-*Player position density heatmap from camera perspective. Red zones indicate high-traffic areas where players spend most time. Generated using feet positions accumulated across all frames with Gaussian smoothing.*
-
-![Movement Flow](outputs/full_40k_frames/analytics/movement_flow.png)
-*Directional flow visualization showing movement patterns. Arrows indicate common player trajectories, revealing typical paths taken during match play.*
-
-![Top 10 Players](outputs/full_40k_frames/analytics/heatmap_top10.png)
-*Individual heatmaps for the 10 most active tracks. Each subplot shows spatial distribution for a single player, useful for analyzing individual coverage patterns.*
-
 ### Movement Analytics
-
-![Velocity Distribution](outputs/full_40k_frames/analytics/velocity_distribution.png)
-*Player velocity histogram showing speed distribution in pixels per frame. Peaks around 0.24 px/frame represent walking speed, with long tail capturing running/sprinting movements.*
 
 ![Movement Analytics](outputs/full_40k_frames/analytics/movement_analytics.png)
 *Comprehensive movement statistics including speed distribution (m/s), distance traveled (meters), track duration (seconds), and speed vs distance correlation scatter plot.*
@@ -81,11 +62,6 @@ Homography-transformed top-down view mapping player positions onto a 2D field re
 
 ![Trajectories](outputs/full_40k_frames/analytics/birds_eye_trajectories_top20.png)
 *Top 20 longest player trajectories visualized on bird's eye view. Each colored line represents one player's complete movement path, useful for understanding individual player coverage.*
-
-### Comparison: Camera View vs Bird's Eye View
-
-![Analytics Comparison](outputs/full_40k_frames/analytics/comparison_camera_vs_birdeye.png)
-*Side-by-side comparison showing the difference between direct camera view analytics (left) and geometrically corrected bird's eye view (right). The bird's eye view enables accurate distance and speed measurements in real-world units (meters, m/s).*
 
 ---
 
@@ -109,6 +85,9 @@ The pipeline processes cricket footage through four main stages:
   - Spatial re-entry gate (reuses IDs for players reappearing near last position)
   - Active track cap of 30 (domain knowledge: 22 players + officials)
   - Track lifetime statistics for quality assessment
+  - ROI Masking Strategy (Crowd Suppression) (Demo Link:- https://youtu.be/P1QsXgND_H0)
+
+
 
 ### 3. Analytics Generation
 Two complementary approaches:
