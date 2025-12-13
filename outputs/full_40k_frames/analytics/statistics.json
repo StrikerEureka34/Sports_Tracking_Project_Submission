@@ -1,0 +1,43 @@
+{
+  "total_frames": 40010,
+  "total_tracks": 2152,
+  "avg_tracks_per_frame": 18.59200743494424,
+  "avg_velocity": 0.24450440825799988,
+  "max_velocity": 9.0,
+  "top_10_active_tracks": [
+    1524,
+    1519,
+    1522,
+    1626,
+    1861,
+    1616,
+    1563,
+    1431,
+    1578,
+    1517
+  ],
+  "config": {
+    "det_thresh": 0.3,
+    "max_age": 12,
+    "min_hits": 3,
+    "iou_threshold": 0.5,
+    "delta_t": 3,
+    "max_active_tracks": 30,
+    "reentry_gate_radius_scale": 1.5,
+    "reentry_gate_max_dead_frames": 50,
+    "use_reid": false,
+    "max_frames_processed": 40010
+  },
+  "lifetime_stats": {
+    "total_tracks": 2152,
+    "very_short_1_2": 78,
+    "short_3_10": 310,
+    "medium_11_100": 1172,
+    "long_101_1000": 543,
+    "very_long_1000+": 49,
+    "min_lifetime": 1,
+    "max_lifetime": 3220,
+    "avg_lifetime": 141.28485130111525,
+    "median_lifetime": 55
+  }
+}
